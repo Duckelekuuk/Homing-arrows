@@ -1,0 +1,7 @@
+name: Homing-Arrow
+version: ${project.version}
+main: com.duckelekuuk.HomingArrow
+api-version: 1.13
+authors: [Duckelekuuk]
+description: Bows can toggle homing arrow mode
+website: http://duckelekuuk.com

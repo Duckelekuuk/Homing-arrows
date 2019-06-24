@@ -1,8 +1,6 @@
 package com.duckelekuuk.runnables;
 
 import lombok.AllArgsConstructor;
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
@@ -21,9 +19,7 @@ public class HomingArrowRunnable extends BukkitRunnable {
             return;
         }
 
-        Vector newVector = target.getBoundingBox().getCenter()
-                .subtract(arrow.getLocation().toVector())
-                .normalize();
+        Vector newVector = target.getBoundingBox().getCenter().subtract(arrow.getLocation().toVector()).normalize();
 
         arrow.setVelocity(newVector);
     }

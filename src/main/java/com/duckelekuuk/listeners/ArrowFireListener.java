@@ -35,19 +35,7 @@ public class ArrowFireListener implements Listener {
         if (!shooter.getInventory().getItemInMainHand().getItemMeta().hasEnchant(ENCHANTMENT))
             return;
 
-        List<Entity> nearbyEntities = shooter.getNearbyEntities(20, 20, 20);
-
-        if (nearbyEntities.size() == 0)
-            return;
-
-        Optional<Entity> optionalEntity = nearbyEntities.stream()
-                .filter(entity -> entity instanceof LivingEntity)
-                .min(Comparator.comparing(entity -> entity.getLocation().distanceSquared(shooter.getLocation())));
-
-        if (!optionalEntity.isPresent())
-            return;
-
-        new HomingArrowRunnable(event.getEntity(), optionalEntity.get()).runTaskTimer(JavaPlugin.getPlugin(HomingArrow.class), 5, 1);
+        new HomingArrowRunnable(event.getEntity()).runTaskTimer(JavaPlugin.getPlugin(HomingArrow.class), 5, 1);
     }
 
 }

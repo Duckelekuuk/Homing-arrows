@@ -21,9 +21,8 @@ public class HomingArrowRunnable extends BukkitRunnable {
     @Override
     public void run() {
 
-        if (target == null) {
+        if (target == null) 
             setTarget();
-        }
 
         if (arrow.isDead() || target.isDead()) {
             cancel();

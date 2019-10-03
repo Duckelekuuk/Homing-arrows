@@ -18,9 +18,8 @@ public class EnchantItemListener implements Listener {
 
     @EventHandler
     public void onEnchant(EnchantItemEvent event) {
-        if (!ENCHANTMENT.canEnchantItem(event.getItem())) {
+        if (!ENCHANTMENT.canEnchantItem(event.getItem()))
             return;
-        }
 
         if (probability(50)) {
             event.getEnchantsToAdd().put(ENCHANTMENT, 1);
@@ -35,9 +34,8 @@ public class EnchantItemListener implements Listener {
     private void addEnchantmentName(ItemStack itemStack) {
         ItemMeta itemMeta = itemStack.getItemMeta();
 
-        if (itemMeta == null) {
+        if (itemMeta == null)
             return;
-        }
 
         if (itemMeta.hasLore()) {
             itemMeta.getLore().add(ChatColor.GRAY + ENCHANTMENT.getName());

@@ -24,9 +24,9 @@ public class ArrowFireListener implements Listener {
 
     @EventHandler
     public void onShoot(ProjectileLaunchEvent event) {
-        if (!(event.getEntity().getShooter() instanceof Player) || event.getEntity().getType() != EntityType.ARROW) {
+        if (!(event.getEntity().getShooter() instanceof Player) || event.getEntity().getType() != EntityType.ARROW) 
             return;
-        }
+        
 
         Player shooter = (Player) event.getEntity().getShooter();
 

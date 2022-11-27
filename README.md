@@ -2,6 +2,7 @@
 
 Hi, Homing arrows is a small plugin I made.
 When you shoot bow or crossbow and it has the Homing enchantment it will go to the entity nearest to the player.
+Have fun
 
 
 ## How to install
